@@ -1,5 +1,5 @@
 
-# Fetch Images From AWS S3 Buckets 
+# Fetch Images 
 
 This project allows to store links to images and search through them
 
@@ -47,3 +47,5 @@ Image file names should follow the naming convention as previous image files. In
 ```bash
   bash scripts/loadData.sh
 ```
+
+You can also run this as a docker image. Build the image using Dockerfile and run it as a container and it will respond to requests on port 3000. Although, it will require a MonogoDB instance available in its network. If a mongodb container is running as well on the same network, its image name needs to be updated in connection uri in ```db/index.js```.  
